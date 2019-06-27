@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ViewModel.NewTaskActivity">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        app:cardCornerRadius="15dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Title"
+                android:layout_margin="20dp"
+                android:paddingHorizontal="20dp"
+                android:paddingVertical="20dp"
+                android:id="@+id/task_title"
+                />
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Description"
+                android:layout_margin="20dp"
+                android:paddingHorizontal="20dp"
+                android:paddingVertical="20dp"
+                android:inputType="textMultiLine"
+                android:layout_below="@id/task_title"
+                android:id="@+id/task_description"
+                />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true"
+                android:padding="20dp"
+                >
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Save"
+                    android:padding="15dp"
+                    android:textSize="20dp"
+                    android:layout_margin="10dp"
+                    android:textAllCaps="false"
+                    android:id="@+id/save_button"
+                    android:onClick="saveButtonClicked"
+                    android:layout_below="@id/task_description"
+                   />
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Discard"
+                    android:padding="15dp"
+                    android:layout_margin="10dp"
+                    android:textSize="20dp"
+                    android:textAllCaps="false"
+                    android:onClick="discardButtonClicked"
+                    android:id="@+id/discard_button"
+                   />
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>
