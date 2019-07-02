@@ -6,30 +6,19 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-   <TextView
-       android:layout_width="match_parent"
-       android:layout_height="wrap_content"
-       android:text="There is no saved task"
-       android:textSize="24sp"
-       android:paddingHorizontal="20dp"
-       android:id="@+id/enpty_task"
-       android:visibility="gone"
-       android:layout_margin="10dp"/>
 
-   <androidx.recyclerview.widget.RecyclerView
-       android:layout_width="match_parent"
-       android:layout_height="match_parent"
-       android:id="@+id/recycler_view"/>
+    <include layout="@layout/content_main"/>
 
-   <com.google.android.material.floatingactionbutton.FloatingActionButton
-       android:layout_width="wrap_content"
-       android:layout_height="wrap_content"
-      android:layout_alignParentBottom="true"
-       android:layout_alignParentEnd="true"
-       android:layout_alignParentRight="true"
-       android:src="@drawable/addition_icon"
-       android:id="@+id/add_task"
-       android:layout_margin="15dp"
-       app:fabSize="auto"
-       android:onClick="addNewTask"/>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="20dp"
+        android:background="@color/colorAccent"
+        android:src="@drawable/add_icon"
+        app:fabSize="auto"
+        android:id="@+id/add_button"/>
+
 </RelativeLayout>
